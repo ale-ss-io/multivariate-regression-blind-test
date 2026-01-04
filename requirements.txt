@@ -1,0 +1,10 @@
+joblib==1.5.2
+matplotlib==3.10.8
+numpy==2.4.0
+pandas==2.3.3
+plotly==6.5.0
+scikit_learn==1.8.0
+scikit_optimize==0.10.2
+scipy==1.16.3
+statsmodels==0.14.4
+xgboost==3.1.2
