@@ -83,6 +83,26 @@ ________________________________________
 
 5. Ejecutar el script, indicando adecuadamente el environment previamente creado.
 
-**Interpretación de solución para negocio**:
+**Interpretación de resultados: Selección de modelo**:
+
+## Resultados de Modelos
+
+| Modelo       | R²_train_CV | RMSE_train_CV | MAE_train_CV | MAPE_train_CV (%) | R²_test | RMSE_test | MAE_test | MAPE_test (%) |
+|-------------|-------------|---------------|--------------|------------------|---------|-----------|----------|----------------|
+| XGBoost     | 0.838310    | 2.075517      | 1.633324     | 15.934728        | 0.850974| 1.829158  | 1.470710| 11.415850      |
+| RandomForest| 0.754542    | 2.557253      | 2.010935     | 20.755130        | 0.771400| 2.265474  | 1.841662| 14.360814      |
+| ElasticNet  | 0.680622    | 2.917007      | 2.232953     | 21.498220        | 0.693004| 2.625348  | 2.115523| 15.781392      |
+
+Dado que se observo: 
+
+- Máximo desempeño en R²_test (~0.85) con XGBoost.
+- Menores errores (RMSE, MAE, MAPE) comparado con otros modelos.
+- Buen equilibrio entre entrenamiento y prueba, indicando bajo overfitting.
+- Capacidad para capturar relaciones no lineales complejas.
+
+XGBoost fue seleccionado como el modelo final para entrenamiento completo y despliegue en datos no vistos.
+
+
+**Interpretación de resultados en conjunto de datos nuevos (blind_test)**:
 
 
