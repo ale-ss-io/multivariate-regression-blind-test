@@ -33,15 +33,13 @@ Para este proyecto, se usó dos conjunto de datos:
 | **feature_17** | Ninguna |
 | **feature_18** | Ninguna |
 | **feature_19** | Ninguna |
-
+| **target** | Ninguna |
 ________________________________________
 **Solución**
 
 Nuestra solución consistió principalmente en:
 
-1. Calidad de datos, analisis de datos exploratorio, pre-procesamiento de datos, entrenamiento y evaluación del modelo XGBRegressor:
-   
-   **Regresión**: predecir la variable de precio de varilla corrugada del siguiente día **target_t_plus_1**.
+1. Calidad de datos, analisis de datos exploratorio, pre-procesamiento de datos, entrenamiento y evaluación de tres modelos de regresión (ElasticNet, RandomForestRegressor y XGBRegressor) para predecir la variable continua target **target**.
 
 La estructura de este proyecto es:
 
