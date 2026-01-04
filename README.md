@@ -85,7 +85,7 @@ ________________________________________
 
 **Interpretación de resultados: Selección de modelo**:
 
-## Resultados de Modelos
+##### Resultados de Modelos
 
 | Modelo       | R²_train_CV | RMSE_train_CV | MAE_train_CV | MAPE_train_CV (%) | R²_test | RMSE_test | MAE_test | MAPE_test (%) |
 |-------------|-------------|---------------|--------------|------------------|---------|-----------|----------|----------------|
@@ -103,6 +103,22 @@ Dado que se observo:
 XGBoost fue seleccionado como el modelo final para entrenamiento completo y despliegue en datos no vistos.
 
 
-**Interpretación de resultados en conjunto de datos nuevos (blind_test)**:
+**Interpretación de resultados en conjunto de datos nuevos (blind_test_data)**:
+Una vez seleccionado el mejor modelo, se entreno con todos los datos de entrenamiento (train_data), onteniendo el siguiente desempeño:
+
+#### Resultados de XGBoost con Datos Completos de Entrenamiento
+
+| Modelo   | R²_train_CV | RMSE_train_CV | MAE_train_CV | MAPE_train_CV (%) |
+|---------|-------------|---------------|--------------|------------------|
+| XGBoost | 0.862934    | 1.883078      | 1.496052     | 14.434526        |
+
+De donde se observo:
+- R²_train_CV mejorado (~0.86) al usar todos los datos de entrenamiento.
+- Errores (RMSE, MAE, MAPE) más bajos que en el split anterior.
+- Indica que el modelo aprende mejor las relaciones al disponer de más datos.
+- Mantiene buen equilibrio y consistencia, evitando sobreajuste excesivo.
+
+Finalmente, se realizó la predicción sobre los datos nuevos (blind_test_data), en donde es de esperar que R2 sea de ~0.85.
+
 
 
