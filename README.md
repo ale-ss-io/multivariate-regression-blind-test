@@ -45,24 +45,20 @@ La estructura de este proyecto es:
 
 ```text
 
-API-steel-rebar-price-prediction                     # Carpeta de proyecto
-│   model_develop_steel_rebar.ipynb                  # Jupyter Notebook de análisis
+multivariate-regression-blind-test                     # Carpeta de proyecto
+│   .gitignore
+│   LICENSE
+│   ML Modelling Challenge.pdf
+│   model_develop_regression.ipynb                     # Python Notebook de analisis y prueba de modelo
+│   predictions_blind_test.csv                         # Archivo de salida de predicciones
+│   preprocessing_pipeline.pkl                         # Archivo de salida .pkl de preprocesamiento para datos en producción
 │   README.md
 │   requirements.txt
-│   Reto_DS.pdf
-│
-├───appFastAPI
-│   │   app.py                                       # Python Script de API REST
-│   │   model.py                                     # Python Script de funciones en producción 
-│   │   requirements.txt
-│   │   __init__.py
-│   │
-│   └───__pycache__
-│           app.cpython-313.pyc
-│           model.cpython-313.pyc
+│   xgb_bestmodel.pkl                                  # Archivo de salida .pkl de mejor modelo ML                             
 │
 └───data
-        Steel_Rebar_Futures_Historical_Data.csv      # Base de datos en archivo .csv
+        blind_test_data.csv                            # Datos de evaluación (sin target)
+        training_data.csv                              # Datos de entrenamiento
 
 ```
 
